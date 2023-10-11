@@ -1,0 +1,500 @@
+*{
+    margin:0%;
+    padding:0%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*HEADER*/
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    background-color: grey;
+    font-size:14px;
+    color:#fff;
+    height: 100px;
+   
+}
+.img-codo{
+    max-width:10rem;
+}
+
+.logo{
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  color: white;
+  align-items: center;
+  font-weight: 400; 
+  cursor:pointer;
+
+}
+.menu a{
+    padding: 0 10px;
+    text-decoration: none;
+    color:white;
+    cursor: pointer;
+    transition: 0.4s;
+    font-size:15px;
+}
+/*.menu{
+    display:flex;
+   
+    gap:1rem;
+}*/
+.mostrar-menu
+.esconder-menu{
+    display:none;
+}
+
+#btn-ticket{
+  color: #005600;
+  padding:0 10px;
+  text-decoration: none;
+  transition: 0.4s;
+}
+#btn-l{
+   color:white;
+   text-decoration: none;
+   
+}
+.mostrar-menu,
+.esconder-menu{
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    transition: 0.4s;
+   
+}
+.mostrar-menu{
+    /*display:flexbox;
+    flex-direction: 80px height;*/
+    order: 1; 
+}
+
+.menu a:hover , .logo:hover , 
+#btn-ticket:hover,
+#btn-l:hover{
+    color:rgb(54, 15, 78)
+   
+}
+.mostrar-menu:hover ,
+.esconder-menu:hover{
+    color:rgb(7, 7, 7);
+}
+#check{
+ display: none;
+}
+/*CAROUSEL*/
+
+.carousel-inner img{
+    background-position: center;
+    background-size: cover;
+    height: 45vh;
+    max-height:350px;
+}
+.carousel-inner::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4vh;
+}
+.carousel-inner{
+    height: 250%;
+}
+.p{
+   font-size:13px;
+    color: white;
+    text-align: center;
+}
+.h5{
+    font-size: 16px;
+    color: white;
+    text-align: center;
+}
+.btn-carousel{
+    text-decoration: none;
+    color:white;
+    border:2% solid black;
+    border-radius: 15%;
+    background-color: transparent ;
+    
+}
+.btn-carousel2{
+  text-decoration: none;
+  color: whitesmoke;
+  background-color: rgb(58, 121, 58);
+  border-radius: 13%;
+  cursor: move;
+}
+/*TARJETAS*/
+#cabecera{
+  display:flex;
+  align-items: center;
+  justify-content:center;
+  flex-direction: column;
+  margin:2px 50px;
+  line-height: 0%;
+  
+  
+
+}
+
+#cabecera div{
+  display: flex;
+  align-items: center;
+
+}
+#cabecera div h4{
+  margin-bottom: 2px;
+  font-size: 15px;
+}
+
+#cabecera div h6{
+ align-items: center;;
+  font-size:5px;
+  color:rgb(24, 22, 22);
+  
+}
+#contenedor{
+   padding: 10px 10px;
+   margin: 0px 50px;
+   display:flex;
+   justify-content: center;
+   text-align: center;
+   margin-left: 25%;
+   margin-right: 25%;
+  
+   
+}
+#contenedor img{
+   height:150px;
+   width: 200px;
+   align-items: center
+}
+
+#contenedor div{
+    padding:33px;
+    margin:25px;
+    
+    border: 0.5px solid rgb(228, 223, 223);
+    
+}
+#contenedor div h2{
+    font-size: 15px;
+    margin: 15px 0px;
+   text-align: start;
+    margin:5px;
+}
+#contenedor div p{
+    color:black;
+    font-size: 11px;
+    text-align: start;
+    margin:5px;
+    
+}
+
+.btn{
+    display:inline-block;
+    text-decoration: none;
+    color:white;
+    padding: 2px;
+    background-color: rgb(255, 166, 0);
+    border: 1px;
+    border-radius: 10%;
+    margin:5px;
+    
+}
+.btn-dos{
+    display:inline-block;
+    text-decoration: none;
+    color:white;
+    padding: 2px;
+    background: rgb(11, 88, 160);
+    border: 1px;
+    border-radius: 10%;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.btn-dos:hover{
+    color: black;
+}
+.btn-ada{
+    display:inline-block;
+    text-decoration: none;
+    padding: 2px;
+    background-color: grey;
+    color: #fff;
+    border:0px;
+    border-radius: 10%;
+    margin:5px;
+}
+.btn-ada1{
+    display:inline-block;
+    text-decoration: none;
+    padding:2px;
+    background-color: rgb(250,000,234) ;
+    color: #fff;
+    border:0px;
+    border-radius: 10%;
+    margin:5px;
+}
+/*----Tarjeta Honolulu----*/
+#honolulu{
+ margin: 50px 0px;
+ display:flex;
+ justify-content: center;
+ margin-left: 2px;
+
+}
+#honolulu img{
+    margin: 50px 0px;
+  height: 50vh;
+  width: 50vw;
+  align-items: center;
+  margin-top: 2px;
+  margin-right:1px;
+
+}
+.descripcion{
+    display:flexbox;
+    margin: 50px 0px;
+    margin-top: 2px;
+    margin-left: 1px;;
+    background-color: rgb(105, 104, 104);
+}
+.descripcion p{
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:12px;
+    margin:3px;
+
+}
+.descripcion h5{
+    color:white;
+    margin:3px;
+    align-items: center;    
+
+}
+.boton-conocemas{
+    border:0.5px solid rgb(248, 242, 242);
+    background-color: transparent;
+    text-decoration: none;
+    color:#fff;
+    font-size: smaller;
+    margin: 10px;
+    padding: 5px;
+    cursor: pointer;
+}
+.boton-conocemas:hover{
+    color: rgb(41, 1, 41);
+    transition: 0.8s;
+}
+/*-----FORMULARIO-----*/
+#formulario{
+    margin: 50px 0px;
+    background-color: white;
+    color:black;
+    padding: 50px 0px;
+    margin-top: 0%;
+
+}
+#formulario h6{
+    justify-items: center;
+    margin-top: 0px;
+    padding: 1px;
+    font-size: 11px;
+    text-align: center;
+}
+#formulario h4{
+    justify-items: center;
+    margin-top: 1px;
+    padding: 1px;
+    margin-bottom: 0%;
+    font-size: 20px;
+    text-align: center;
+
+}
+#formulario p{
+    justify-items: center;
+    margin-top: 1px;
+    padding: 1px;
+    margin-bottom: 0%;
+    font-size: 11px;
+    text-align: center;
+}
+#parraf{
+    display: inline;
+    font-size: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 1px;
+    color:rgb(46, 45, 45);
+    justify-items: 0 auto;
+    text-align:start;
+}
+#formulario form{
+    max-width: 70%;
+    margin: 0 auto;
+    
+}
+.datos-form{
+    display: flex;
+   
+}
+form input{
+    display:block;
+    margin-bottom: 10px;
+    margin:0px 15px
+}
+.datos-form div{
+    padding: 10px;
+    flex: 1;
+}
+#form1{
+    margin-right: 0px !important;
+}
+form input, form textarea{
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solido rgb(182, 178, 178);
+    padding: 5px 5px;
+    outline: 0;
+    width: 100%;
+    display: block;
+    margin-bottom: 5px;
+    
+}
+form input::placeholder, 
+form textarea::placeholder{
+    color:rgb(82, 79, 79);
+}
+.mensaje{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.btn-enviar{
+    display:block;
+    margin:2px;
+    border-radius: 5px;
+    background-color: #33a033;
+    color:white;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid rgb(6, 56, 6);
+}
+.btn-enviar:hover{
+    transition: all 0.4s;
+     color: black;
+     cursor: pointer;
+}
+
+/*----FOOTER----*/
+footer{
+    margin-top: 0%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(15, 75, 90); 
+    margin-top: 0%;
+   
+}
+.btn-footr{
+ padding: 0 10px;
+ color:white;
+ cursor: pointer;
+ transition: 0.4s;
+ font-size:13px;
+ margin:30px;
+ text-decoration: none;
+}
+
+.btn-footr:hover{
+    color:rgb(21, 41, 2);
+    
+}
+@media (max-width: 768px){
+    /*HEADER*/
+    .mostrar-menu,
+    .esconder-menu{
+        display: block;
+        color:black;
+        border:0;
+        font-size: 1.25rem;
+    }
+    .mostrar-menu{
+        color:black;
+        background-color: grey;
+        
+    }
+    .esconder-menu{
+        color:rgb(12, 12, 12);
+    }
+    .menu{
+        display:none;
+   
+    }
+    
+    .logo,
+    .img-codo{
+        max-width: 50px;
+        text-align:left;
+    }
+    .menu{
+        position:fixed;
+        width: 100%;
+        height: 100vh;
+        background: grey;
+        left: 0;
+        right:-100%;
+        top:0;
+        text-align: center;
+        padding:100px 0px;
+        z-index: 100;
+        transition: 0.8s;
+
+    }
+    .menu a{
+        display:block;
+        padding: 20px;
+
+    }
+    
+    .esconder-menu{
+        position:absolute;
+        top: 40px;
+        right:40px;
+    }
+    #check:checked ~ .menu{
+        right:0;
+    }
+    /*tarjetas*/
+    #contenedor{
+        flex-direction: column;
+        align-items: center;
+    }
+    /*honolulu*/
+    #honolulu{
+        flex-direction: column;
+        align-items: center;
+        
+    
+    }
+    #honolulu img{
+        width: 200px;
+        height: 200px;
+    }
+    .boton-conocemas{
+        padding:0px;
+    }
+    /*formulario*/
+    .datos-form{
+        flex-direction: column;
+    }
+    /*pie de pag*/
+    footer{
+        flex-direction: column;
+        z-index: 100;
+    }
+}
