@@ -409,6 +409,60 @@ footer{
  margin:30px;
  text-decoration: none;
 }
+/* css de segundo indexx*/
+.tarj{
+   padding:50px;
+   margin:20px;
+   display:flex;
+   justify-content:space-around;
+   text-align: center;
+   height: 300px;
+   
+   
+}
+.tarj1:hover{
+    cursor:pointer ;
+   background-color:rgb(161, 161, 182);
+
+}
+.tarj2:hover{
+    cursor:pointer ;
+   background-color: rgb(94, 243, 81);
+}
+.tarj3:hover{
+   cursor:pointer ;
+   background-color: rgb(255, 232, 127);
+
+}
+.tarj1{
+    text-align: center;
+    list-style-type: none;
+    padding: 5%;
+    border:1.5px solid blue;
+    /*margin-right: 5px;*/
+    
+    
+
+}
+.tamañoLetra{
+    font-size: small;
+}
+.tarj2{
+    
+    text-align: center;
+    list-style-type: none;
+    padding: 5%;
+    border:1.5px solid green;
+    /*margin-right: 5px;*/
+    
+}
+.tarj3{
+    text-align: center;
+    list-style-type: none;
+    padding: 5%;
+    border: 1.5px solid orangered;
+
+}
 
 .btn-footr:hover{
     color:rgb(21, 41, 2);
@@ -496,5 +550,15 @@ footer{
     footer{
         flex-direction: column;
         z-index: 100;
+    }
+    /*segundo indexx*/
+    .tarj{
+       flex-direction: column;
+       padding-left: 0.5%;
+       padding-right: 0.5%;
+       padding-top: 70%;
+       font-size: small;
+
+
     }
 }
