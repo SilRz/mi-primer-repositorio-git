@@ -411,13 +411,15 @@ footer{
  text-decoration: none;
 }
 /* css de segundo indexx*/
+
 .tarj{
    padding:50px;
    margin:20px;
    display:flex;
-   justify-content:space-around;
+   justify-content:space-between;
    text-align: center;
    height: 300px;
+   
    
    
 }
@@ -462,31 +464,30 @@ footer{
     border: 1.5px solid orangered;
 
 }
+
 .modifText{
-    text-align: center !important;
+    text-align: center;
+    z-index: 100%;
   
 }
-#formu-dos{
-    display:flex;
-}
+
 .ajus-form{
     display:flex;
-   
-    justify-content:space-between;
+   justify-content:space-between;
     background: #fff;
     border: 1px solido rgb(182, 178, 178);
     padding: 2px 2px;
     outline: 0;
     align-items: center;
     margin-bottom: 5px;
-    margin-left:130px;
-    margin-right: 130px;
+    margin-left:10%;
+    margin-right: 10%;
     
 }
 .ajusCorreo{
     display:flex;
-    margin-left: 125px;
-    margin-right: 125px;
+    margin-left: 10%;
+    margin-right: 10%;
     justify-content: space-between;
     align-items: center;
     border:1px solido rgb(182, 178, 178);
@@ -497,18 +498,18 @@ footer{
 .ajus-formu{
     display:flex;
     margin-top: 10px;
-    margin-bottom: 10px;
-    text-align: center;
-    margin-left: 130px;
-    margin-right: 130px;
-    justify-content:space-between;
+    margin-bottom: 10px; 
+    margin-left: 10%;
+    margin-right: 10%;
+    
 }
+
 
 
 .totalPagar{
     display:flex;
-    margin-left:125px;
-    margin-right: 125px;
+    margin-left:10%;
+    margin-right: 10%;
     margin-bottom: 5px;
     align-items: center;
     justify-content: space-between;
@@ -517,17 +518,19 @@ footer{
     display:flex;
     align-items: center;
     justify-content: space-between;
-    margin-left: 125px;
-    margin-right: 125px;
+    margin-left: 10%;
+    margin-right: 10%;
     justify-content: space-between;
     border:1px solido rgb(182, 178, 178);
     padding: 2px 2px;
     outline: 0;
-    color:#33a033;
-   
+    margin-bottom: 15px;
+    color: #33a033;
+     
 }
 .btn-bores:hover{
     cursor: pointer;
+    
    
 }
 .btn-pagar{
@@ -541,6 +544,13 @@ footer{
 .btn-footr:hover{
     color:rgb(21, 41, 2);
     
+}
+.warnings{
+    width: 200px;
+    text-align: center;
+    margin:auto;
+    color:rgb(231, 70, 70);
+    padding-top: 20px;
 }
 @media (max-width: 768px){
     /*HEADER*/
@@ -643,26 +653,40 @@ footer{
        flex-direction: column;
        padding-left: 2%;
        padding-right: 1%;
-       padding-top: 70%;
-       margin: auto;
+       margin:0%;
        font-size: small;
     }
     .modifText{
         font-size:small;
-        margin-top: 30%;
+        margin-top: 50%;
         align-items: center;
 
+    }
+    
+    #formu-dos input{
+      flex-direction: row;
+       max-width: 100%;
+       margin-left: 2%;
+       margin-right: 2%;
+       
     }
     .ajus-form{
         flex-direction: column;
+        max-width: 100%;
     }
-    #formu-dos{
-        display: column;
-        align-items: center;
+    .btn-bores{
+        flex-direction: column;
+        max-width: 100%;
+
+    }
+    .totalPagar{
+        flex-direction: column;
+        max-width: 100%;
         
     }
     .ajus-formu{
-        display:block;
-
+        flex-direction: column;
+        text-align:center;
+        max-width: 100%;
     }
 }
