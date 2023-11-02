@@ -16,11 +16,11 @@
             <!--<input type="checkbox" id="check">
             <label for="check" class="mostrar-menu"><i class="bi bi-menu-up"></i>
             </label>-->
-           <button class="mostrar-menu"><i class="bi bi-menu-up"></i></button>
+           <button class="mostrar-menu" id="abrir"><i class="bi bi-menu-up"></i></button>
           
         
   
-        <nav class="menu">
+        <nav class="nav" id="nav">
             
             <a href="#"id="btn-l">La conferencia</a> 
 
@@ -32,7 +32,7 @@
 
             <a href="#" id="btn-ticket"> Comprar tickets </a>
 
-            <label for="check" class="esconder-menu">&#215</label>
+            <label for="check" class="esconder-menu" id="cerrar">&#215</label>
         </nav> 
     
       </header>
@@ -60,39 +60,45 @@
 
       </div>
     </section>
-    <section>
-        <div class="ajusLetra">
-            <h6>VENTA</h6>
-            <h3>VALOR DE TICKET $200</h3>
-        </div>
-    </section>
+    
     <section >
-    <form id="formu-dos" >
-        <div>
-          <div class="ajus-form">
-            <input type="text" name="nombre" id="nombre" placeholder="Nombre"></input>
-            <input type="text" name="apellido" id="apellido" placeholder="Apellido"></input>
-            
+      <div class="modifText">
+        <h6>VENTA</h6>
+        <h3>VALOR DE TICKET $200</h3>
+      </div>
+      </section>
+      <section id="formu-dos">
+    <form action="#" >
+      
+        <div  >
+          <div  class="ajus-form">
+            <input class="nombre"type="text" name="nombre" id="nombre" placeholder="Nombre"></input>
+
+            <input class="apellido" type="text" name="apellido" id="apellido" placeholder="Apellido"></input>
           </div>
-          <div class="ajus-correo">
-            <input type="text" name="correo" id="correo" placeholder="Correo"></input>
+          <div  class="ajusCorreo">
+            <input class="correo" type="text" name="correo" id="correo" placeholder="Correo"></input>
 
           </div>
-          <div class="ajust-form">
+          <div  class="ajus-formu">
             <label for="cantidad">Cantidad</label>
-            <input type="text" name="cantidad" id="cantidad" placeholder="Cantidad"></input>
+            <input class="cantidad"type="text" name="cantidad" id="cantidad" placeholder="Cantidad"></input>
+          <!--</div>
+          <div>-->
             <label for="categoria">Categoria</label>
             <input type="text" name="categoria" id="categoria" placeholder="Estudiante"></input>
           </div>
-          <div>
-            <button><a href="#" class="btn-pagar">Total a pagar:$</a></button>
+          <div class="totalPagar">
+            <input type="number" id="pagoTotal" name="pagoTotal" min="20" max="200" placeholder="Total a pagar:$"></a>
           </div>
-          <div>
-            <button><a href="#" class="btn-borrar">Borrar</a></button>
-            <button><a href="#" class="btn-resumen">Resumen</a></button>
+          <div class="btn-bores">
+            <input type="submit" value="Enviar">
+            <input type="submit" value="Resumen">
+            <!--<a href="#" class="btn-borrar">Borrar</a>
+            <a href="#" class="btn-resumen">Resumen</a>-->
           </div>
         </div>
     </form>
-
+    <script src="./main.js"></script>
 </body>
 </html>

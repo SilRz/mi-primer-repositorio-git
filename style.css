@@ -67,9 +67,10 @@ header{
    
 }
 .mostrar-menu{
-    /*display:flexbox;
-    flex-direction: 80px height;*/
+    display:flexbox;
+    flex-direction: 80px height;
     order: 1; 
+    color:black;
 }
 
 .menu a:hover , .logo:hover , 
@@ -82,9 +83,9 @@ header{
 .esconder-menu:hover{
     color:rgb(7, 7, 7);
 }
-#check{
+/*#check{
  display: none;
-}
+}*/
 /*CAROUSEL*/
 
 .carousel-inner img{
@@ -461,35 +462,74 @@ footer{
     border: 1.5px solid orangered;
 
 }
-.ajusLetra{
-    text-align: center;
-    
+.modifText{
+    text-align: center !important;
+  
 }
-/*#formu-dos{
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow:  0 0 10px rgba(0,0,0,0.1);
-    z-index: auto;
-    display: flex;
-}*/
-
-.ajust-form{
-    display:flexbox;
-    padding: 20px;
-    flex-direction:column;
-    max-width: 50%;
-
-    
-}
-.ajust-form label{
-    text-align: center;
-
+#formu-dos{
+    display:flex;
 }
 .ajus-form{
     display:flex;
+   
+    justify-content:space-between;
+    background: #fff;
+    border: 1px solido rgb(182, 178, 178);
+    padding: 2px 2px;
+    outline: 0;
+    align-items: center;
+    margin-bottom: 5px;
+    margin-left:130px;
+    margin-right: 130px;
+    
+}
+.ajusCorreo{
+    display:flex;
+    margin-left: 125px;
+    margin-right: 125px;
+    justify-content: space-between;
+    align-items: center;
+    border:1px solido rgb(182, 178, 178);
+    padding: 2px 2px;
+    outline: 0;
+    
+}
+.ajus-formu{
+    display:flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-left: 130px;
+    margin-right: 130px;
     justify-content:space-between;
 }
 
+
+.totalPagar{
+    display:flex;
+    margin-left:125px;
+    margin-right: 125px;
+    margin-bottom: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+.btn-bores{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 125px;
+    margin-right: 125px;
+    justify-content: space-between;
+    border:1px solido rgb(182, 178, 178);
+    padding: 2px 2px;
+    outline: 0;
+    color:#33a033;
+   
+}
+.btn-bores:hover{
+    cursor: pointer;
+   
+}
 .btn-pagar{
     display: flex;
     align-items: center;
@@ -511,13 +551,45 @@ footer{
         border:0;
         font-size: 1.25rem;
     }
+    
+    .nav{
+        display:none;
+        position:absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap:1rem;
+        opacity: 0;
+        visibility: hidden;
+        
+        top:0;
+        bottom: 0;
+        right:0;
+        background-color: rgb(7, 7, 7);
+        padding: 2rem;
+        text-align: center;
+        padding:100px 0px;
+        z-index: 100;
+
+    }
+    .nav.visible{
+        opacity:1;
+        visibility: visible;
+    }
+    .nav a{
+        flex-direction: column;
+        align-items: end;
+        color:#0a0a0a;
+        padding: 20px;
+    }
     .mostrar-menu{
         color:black;
         background-color: grey;
         
     }
     .esconder-menu{
-        color:rgb(12, 12, 12);
+        color:rgb(250, 248, 248);
+
     }
     .menu{
         display:none;
@@ -529,26 +601,7 @@ footer{
         max-width: 50px;
         text-align:left;
     }
-    .menu{
-        position:fixed;
-        width: 100%;
-        height: 100vh;
-        background: grey;
-        left: 0;
-        right:-100%;
-        top:0;
-        text-align: center;
-        padding:100px 0px;
-        z-index: 100;
-        transition: 0.8s;
-
-    }
-    .menu a{
-        display:block;
-        padding: 20px;
-
-    }
-    
+  
     .esconder-menu{
         position:absolute;
         top: 40px;
@@ -588,11 +641,28 @@ footer{
     /*segundo indexx*/
     .tarj{
        flex-direction: column;
-       padding-left: 0.5%;
-       padding-right: 0.5%;
+       padding-left: 2%;
+       padding-right: 1%;
        padding-top: 70%;
+       margin: auto;
        font-size: small;
+    }
+    .modifText{
+        font-size:small;
+        margin-top: 30%;
+        align-items: center;
 
+    }
+    .ajus-form{
+        flex-direction: column;
+    }
+    #formu-dos{
+        display: column;
+        align-items: center;
+        
+    }
+    .ajus-formu{
+        display:block;
 
     }
 }
