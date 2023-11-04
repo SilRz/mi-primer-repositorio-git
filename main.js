@@ -9,68 +9,148 @@ abrir.addEventListener("click", () => {
 cerrar.addEventListener("click", () =>{
     nav.classList.remove("visible");
 })
+
+
 // -------validación de formulario---------
-var nombre= document.getElementById("nombre").value;
-var apellido= document.getElementById("apellido").value;
-var correo= document.getElementById("email").value;
-var cantidad= document.getElementById("cantidad").value;
-var categoria= document.getElementById("categoria").value;
-var pagoTotal= document.getElementById("pagoTotal").value;
-/*var enviar= documen-getElementById("enviar").value;
-var resumen= documen.getElementById("resumen").value;
-var form= document.getElementById("form");
-var parrafo= document.getElementById(warnings);*/
-var valido= true;
 
-/*form.addEventListener("submit", e=>{
-    e.preventDefault()
-    let warnings = "";
-    let entrar= fale;
-    let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2.3})+$/;
-    parrafo.innerHTML="";*/
 
-    if(nombre.value.length<6){
-        warnings += 'El nombre no es valido <br>';
-        entrar= true;
+function validarFormulario(){
+    
+    var nombre= documnt.forms[form]["nombre"].value;
+    var nombre= document.getElementById("nombre").value;
+    var apellido= document.getElementById("apellido").value;
+    var correo= document.getElementById("correo").value;
+    var cantidad= document.getElementById("cantidad").value;
+    /*var totalApagar= document.getElementById("totalPagar").value;*/
+    var categoria= document.getElementById("categoria").value;
+
+    if(!validarCampo(nombre,'Nombre')){
+        return false;
     }
-    if(apellido.value.length <6){
-        warnings +='El apellido no es valido <br>';
-        entrar = true;
+    if(!validarCampo(apellido, 'Apellido')){
+        return false;
     }
-    if(regexEmail.test(email.value)){
-        warnings += 'El email no es valido <br>';
-        entrar= true;
+    if(!validarCampo(correo, 'Correo')){
+        return false;
+    }
+    if(!validarCampo(cantidad, 'Cantidad')){
+        return false;
+    }
+    if(!validarCampo(categoria, 'Categoria')){
+        return false;
     }
 
-    if(cantidad >= 1){
-        entrar= true;
+    mostrarResumen();
+ 
+}
 
-    }
-    else{
-        warnings += 'La cantidad ingresada no es valida <br>';
-        
-    }
-    if(categoria==estudiante||trainee||junior){
-        entrar=true;
+function validarCampo(){
+     var regex =/^([\da-z_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
 
-    }else{
-        warnings += 'La categoria no es valida <br>';
-        
-
-    }
-    if(pagoTotal > 40){
-        entrar= true;
-
-    }else{
-        warnings +='El monto ingresado no es valido <br>';
-    }
-    if(entrar){
-        parrafo.innerHTML= warnings;
-    }else{
-        parrafo.innerHTML="Enviado";
+    if(nombre.trim().length <3){
+        alert('El nombre debe contar con al menos 3 caracteres.');
+        return false;
     }
 
-  }  )
+    if(apellido.trim().length <3){
+        alert('El apellido debe contar con al menos 3 caracteres.');
+        return false;
+       
+    }
+    if(!regex.test(correo)){
+        alert('Por favor ingrese un correo electrónico válido')
+        return false;
+    }
+
+    if(cantidad.trim()===""||isNaN(cantidad)||cantidad<=0){
+        alert("Debe ingresar un número mayor a 0 ");
+        return false;
+
+    }
+
+    return true;
+}
+    
+function calcularDescuento(cantidad, categoria){
+    var baseTarifa= 200;
+    var descuentoJunior= 0.15;
+    var descuentoTrainee=  0.5;
+    var descuentoEstudiante= 0.8;
+    
+    var descuento = 0;
+    switch(categoria){
+        case 'junior':
+            
+            descuento=descuentoJunior;
+            break;
+        case 'trainee':
+           descuento=descuentoTrainee;
+           break;   
+        case 'estudiante':
+           descuento= descuentoEstudiante;
+           break;
+
+    }
+    var costoTotal= baseTarifa * cantidad *(1-descuento);
+
+     return costoTotal;
+}
+function mostrarResumen(){
+    var nombre= document.getElementById("nombre").value;
+    var apellido= document.getElementById("apellido").value;
+    var correo= document.getElementById("correo").value;
+    var cantidad= document.getElementById("cantidad").value;
+    var categoria= document.getElementById("categoria").chequed;
+   
+    var costoTotal = calcularDescuento(cantidad,categoria)
+
+    alert('Resumen de compra:\nNombre:' + nombre + '\nApellido: ' + apellido + '\nCorreo: ' + correo + '\nCantidad de tickets: ' + cantidad + '\nCategoria de estudiante :' + categoria + '\nCosto Total a pagar: $' + costoTotal.toFixed(2));
+    
+    document.getElementById('totalPagar').value= costoTotal.toFixed(2);
+
+ }
+function borrarCampos(){
+     document.getElementById("nombre").value="";
+     document.getElementById("apellido").value="";
+     document.getElementById("correo").value="";
+     document.getElementById("cantidad").value="";
+     document.getElementById("categoria").value="";
+     document.getElementById("totalPagar").value="";
+   
+
+}
+
+     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+
+  
   
  
 

@@ -9,13 +9,11 @@
     <title>Comprar tickets</title>
 </head>
 <body>
-    <header>
+    <header id="head">
         <div class="logo" >
           <a herf="#"> Conf. Bs As</a>
         </div>
-            <!--<input type="checkbox" id="check">
-            <label for="check" class="mostrar-menu"><i class="bi bi-menu-up"></i>
-            </label>-->
+            
            <button class="mostrar-menu" id="abrir"><i class="bi bi-menu-up"></i></button>
           
         
@@ -71,33 +69,39 @@
       <form action="#" id="form" onsubmit="return validarFormulario()">
       
         <div  id="formu-dos">
-          <div  class="ajus-form">
-            <input class="nombre"type="text" name="nombre" id="nombre" placeholder="Nombre"></input>
+          <div class="ajus-form">
+            <input class="nombre"type="text" placeholder="Nombre" aria-label="Nombre" id="nombre" required >
 
-            <input class="apellido" type="text" name="apellido" id="apellido" placeholder="Apellido"></input>
+            <input type="text"class="apellido"  placeholder="Apellido" aria-label="Apellido" id="apellido" required>
           </div>
-          <div  class="ajusCorreo">
-            <input class="correo" type="text" name="correo" id="correo" placeholder="Correo"></input>
+          <div class="correo" >
+            <input class="ajusCorreo" class="correo" type="text" placeholder="Correo" arial-label="Correo" id="correo" required>
 
           </div>
-          <div  class="ajus-formu">
-            <label for="cantidad">Cantidad</label>
-            <input class="cantidad"type="nember" name="cantidad" id="cantidad" placeholder="Cantidad"></input>
-          <!--</div>
-          <div>-->
-            <label for="categoria">Categoria</label>
-            <input type="text" name="categoria" id="categoria" placeholder="Estudiante"></input>
+          <div class="ajus-formu">
+            <label  for="cantidad">Cantidad</label>
+            <input  type="number" aria-label="Cantidad" id="cantidad" placeholder="Cantidad" min="1"value="1">
+          
+    
+            <label for="categoria" class="form-categoria">Categoria</label>
+            <select class="categ" class="form-select" aria-label="Categoria" id="categoria">
+            <option value selected>Seleccione una opcción</option>
+            <option value="1">Estudiante</option>
+            <option value="2">Trainee</option>
+            <option value="3">Junior</option>
+          </select>
           </div>
-          <div class="totalPagar">
-            <input type="number" id="pagoTotal" name="pagoTotal" min="20" max="200" placeholder="Total a pagar:$"></a>
+          <div class="pagr">
+            <input  class="totalPagar" type="text" id="totalPagar" name="pagoTotal"placeholder="Total a pagar:$" readonly>
           </div>
-          <div class="btn-bores">
-            <input type="submit" value="Enviar"></input>
-            <input type="submit" value="Resumen"></input>
+          <div class="bot-on">
+            <input class="btn-bores"type="submit" value="Borrar" onclick="borrarCampos()"></input>
+            <input class="btn-bores" id="btonres" type="submit" value="Resumen" onclick="mostrarResumen()"></input>
             <p class="warnings" id="warnings"></p>
-            <!--<a href="#" class="btn-borrar">Borrar</a>
-            <a href="#" class="btn-resumen">Resumen</a>-->
+           
           </div>
+          <div id="resumen"></div>
+          
         </div>
       </form>
     </section> 
