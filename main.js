@@ -16,38 +16,42 @@ cerrar.addEventListener("click", () =>{
 
 function validarFormulario(){
     
-    var nombre= documnt.forms[form]["nombre"].value;
     var nombre= document.getElementById("nombre").value;
     var apellido= document.getElementById("apellido").value;
     var correo= document.getElementById("correo").value;
-    var cantidad= document.getElementById("cantidad").value;
-    /*var totalApagar= document.getElementById("totalPagar").value;*/
+    var cantidad= parseInt(document.getElementById('cantidad').value);
+    /*var pagoTotal= document.getElementById("totalPagar").value;*/
     var categoria= document.getElementById("categoria").value;
 
-    if(!validarCampo(nombre,'Nombre')){
+    if(!validarCampo(nombre,"Nombre")){
         return false;
     }
-    if(!validarCampo(apellido, 'Apellido')){
+    if(!validarCampo(apellido, "Apellido")){
         return false;
     }
-    if(!validarCampo(correo, 'Correo')){
+    if(!validarCampo(correo, "Correo")){
         return false;
     }
-    if(!validarCampo(cantidad, 'Cantidad')){
+    if(!validarCampo(cantidad, "Cantidad")){
         return false;
     }
-    if(!validarCampo(categoria, 'Categoria')){
+    if(!validarCampo(categoria, "Categoria")){
         return false;
     }
 
-    mostrarResumen();
+   return validarFormulario();
  
 }
 
-function validarCampo(){
-     var regex =/^([\da-z_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
 
-    if(nombre.trim().length <3){
+
+
+
+function validarCampo(){
+
+     let regex =/^([\da-z_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
+
+   if(nombre.trim().length <3){
         alert('El nombre debe contar con al menos 3 caracteres.');
         return false;
     }
@@ -67,34 +71,45 @@ function validarCampo(){
         return false;
 
     }
+    if(!categoria){
+        alert ("Seleccione una categoria")
+        return false;
+    }
 
     return true;
 }
     
-function calcularDescuento(cantidad, categoria){
+function calcularDescuento(cantidad,categoria){
     var baseTarifa= 200;
     var descuentoJunior= 0.15;
-    var descuentoTrainee=  0.5;
+    var descuentoTrainee=  0.5; 
     var descuentoEstudiante= 0.8;
     
     var descuento = 0;
+
     switch(categoria){
-        case 'junior':
+        case "estudiante":
+            descuento= descuentoEstudiante;
             
-            descuento=descuentoJunior;
             break;
-        case 'trainee':
+        case "trainee":
            descuento=descuentoTrainee;
            break;   
-        case 'estudiante':
-           descuento= descuentoEstudiante;
+        case "junior":
+         descuento=descuentoJunior;
            break;
-
+        default:
+            descuento =0;
+            break;
     }
-    var costoTotal= baseTarifa * cantidad *(1-descuento);
+    
+    
+    
+    var costoTotal= baseTarifa * cantidad * (1 - descuento);
 
      return costoTotal;
 }
+
 function mostrarResumen(){
     var nombre= document.getElementById("nombre").value;
     var apellido= document.getElementById("apellido").value;
@@ -102,7 +117,7 @@ function mostrarResumen(){
     var cantidad= document.getElementById("cantidad").value;
     var categoria= document.getElementById("categoria").chequed;
    
-    var costoTotal = calcularDescuento(cantidad,categoria)
+    var costoTotal = calcularDescuento();
 
     alert('Resumen de compra:\nNombre:' + nombre + '\nApellido: ' + apellido + '\nCorreo: ' + correo + '\nCantidad de tickets: ' + cantidad + '\nCategoria de estudiante :' + categoria + '\nCosto Total a pagar: $' + costoTotal.toFixed(2));
     
@@ -119,9 +134,20 @@ function borrarCampos(){
    
 
 }
+/*if(categoria==='junior'){
+        costoTotal= baseTarifa*cantidad*descuentoJunior;
+    }else if(categoria==='trainee'){
+        costoTotal=baseTarifa*cantidad*descuentoTrainee;
 
+    }else if(categoria==='estudiante'){
+        costoTotal=baseTarifa*cantidad*descuentoEstudiante;
+
+    }*/
      
-    
+
+
+
+
     
     
     
