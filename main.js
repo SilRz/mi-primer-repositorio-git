@@ -16,7 +16,8 @@ cerrar.addEventListener("click", () =>{
 
 function validarFormulario(){
     
-    var nombre= document.getElementById("nombre").value;
+  
+   var nombre= document.getElementById("nombre").value;
     var apellido= document.getElementById("apellido").value;
     var correo= document.getElementById("correo").value;
     var cantidad= parseInt(document.getElementById('cantidad').value);
@@ -39,7 +40,7 @@ function validarFormulario(){
         return false;
     }
 
-   return validarFormulario();
+   return mostrarResumen();
  
 }
 
@@ -105,7 +106,7 @@ function calcularDescuento(cantidad,categoria){
     
     
     
-    var costoTotal= baseTarifa * cantidad * (1 - descuento);
+    var costoTotal= baseTarifa * cantidad * descuento;
 
      return costoTotal;
 }
@@ -115,13 +116,13 @@ function mostrarResumen(){
     var apellido= document.getElementById("apellido").value;
     var correo= document.getElementById("correo").value;
     var cantidad= document.getElementById("cantidad").value;
-    var categoria= document.getElementById("categoria").chequed;
+    var categoria= document.getElementById("categoria").value;
    
-    var costoTotal = calcularDescuento();
+    var costoTotal = calcularDescuento(cantidad, categoria);
 
     alert('Resumen de compra:\nNombre:' + nombre + '\nApellido: ' + apellido + '\nCorreo: ' + correo + '\nCantidad de tickets: ' + cantidad + '\nCategoria de estudiante :' + categoria + '\nCosto Total a pagar: $' + costoTotal.toFixed(2));
     
-    document.getElementById('totalPagar').value= costoTotal.toFixed(2);
+    document.getElementById("totalPagar").value= costoTotal.toFixed(2);
 
  }
 function borrarCampos(){

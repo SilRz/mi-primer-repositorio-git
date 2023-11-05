@@ -68,41 +68,49 @@
     <section >
       <form id="form" name="forms" onsubmit="return validarFormulario()">
       
-        <div  id="formu-dos">
+        <div class="formu-dos">
           <div class="ajus-form">
-            <input class="nombre"type="text" placeholder="Nombre" name="Nombre" id="nombre" required minlength="3">
-
-            <input type="text"class="apellido"  placeholder="Apellido" name="Apellido" id="apellido" required minlength="3">
+            <input type="text" class="nombre" id="nombre" placeholder="Nombre" name="Nombre" required minlength="3">
           </div>
-          <div class="correo" >
-            <input class="ajusCorreo" class="correo" type="text" placeholder="Correo" name="Correo" id="correo" required>
-
+          <div>
+            <input type="text"class="apellido" id="apellido"  placeholder="Apellido" name="Apellido" required minlength="3">
           </div>
-          <div class="ajus-formu">
-            <label  for="cantidad" id="cantidad">Cantidad</label>
-            <input  type="number" name="Cantidad" id="cantidad" placeholder="Cantidad" min="1"value="1" required>
-          
-            <label for="categoria" id="categoria" class="form-categoria">Categoria</label>
-            <select class="categ" class="form-select" name="Categoria"  onchange="calcularDescuento()" required>
-            <option value selected>Seleccione una opción:</option>
-            <option value="estudiante">Estudiante</option>
-            <option value="trainee">Trainee</option>
-            <option value="junior">Junior</option>
-          </select>
+        </div>  
+        <div class="correo" >
 
-          </div>
-          <div class="pagr">
+          <input type="text" class="ajusCorreo" class="correo"  placeholder="Correo" name="Correo" id="correo" required>
+
+        </div>
+        <div class="ajus-formu">
+            <div class="kntidad">
+              <label  for="Cantidad">Cantidad</label>
+              <input  type="number" class="cantidad"  id="cantidad" placeholder="Cantidad" min="1"value="1" required>
+            </div>
+            <div class="ktegoria">
+               <label for="categoria"  class="form-categoria">Categoria</label>
+               <select id="categoria" class="categ" class="form-select" onchange="calcularDescuento()" required>
+                 <option selected>Seleccione una opción:</option>
+                 <option value="estudiante">Estudiante</option>
+                 <option value="trainee">Trainee</option>
+                 <option value="junior">Junior</option>
+                </select>
+            </div>
+        </div>
+        <div class="pagr">
             <input  class="totalPagar" type="text" id="totalPagar" name="pagoTotal"placeholder="Total a pagar:$" readonly>
-          </div>
-          <div class="bot-on">
-            <input class="btn-bores"type="submit" value="Borrar" onclick="borrarCampos()"></input>
-            <input class="btn-bores" id="btonres" type="submit" value="Resumen" onchange="mostrarResumen()"></input>
-            <p class="warnings" id="warnings"></p>
+        </div>
+        <div class="bot-on">
+            <div>
+               <input class="btn-bores"type="submit" value="Borrar" onclick="borrarCampos()"></input>
+            </div>
+            <div>
+              <input class="btn-bores" id="btonres" type="submit" value="Resumen" onclick="mostrarResumen()"></input>
+            </div>
            
-          </div>
+        </div>
           <div id="resumen"></div>
           
-        </div>
+        
       </form>
     </section> 
     <footer >

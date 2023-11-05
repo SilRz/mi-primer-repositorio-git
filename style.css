@@ -477,7 +477,11 @@ footer{
     z-index: 100%;
   
 }
-
+.formu-dos{
+    display:flex;
+    margin:25px, 0px;
+    
+}
 .ajus-form{
     display:flex;
     background: #fff;
@@ -487,10 +491,11 @@ footer{
     margin-bottom: 5px;
     margin-left:8%;
     margin-right: 8%;
-    max-width: 75%;  
+    
 }
+
 .ajusCorreo{
-    display:flex;
+    
     border:1px solido rgb(75, 71, 71);
     margin-top: 5px;
     margin-bottom: 5px;
@@ -498,22 +503,33 @@ footer{
 }
 .correo{
     display:flex;
-    max-width: 75%;
-    margin-left: 8%;
-    margin-right: 8%;
+    margin:25px, 0px;
+    
+    
 
 }
 .ajus-formu{
-    display:flex;
+    display: flex;
+    justify-content: space-between;
     margin-top: 5px;
     margin-bottom: 5px; 
+   
     border:1px solido rgb(75, 71, 71);
-    margin-right: 8%;
-    max-width: 75%;
-    margin-left: 8%;
+    
     
 }
-
+.kntidad{
+    display: grid;
+    max-width: 25%;
+    text-align: center;
+}
+.ktegoria{
+    display:grid;
+    max-width: 25%;
+    margin:10px;
+    text-align: center;
+    align-items: center;;
+}
 .categ{
     border-radius: 10px;
     border:2px solid rgb(75, 73, 73);
@@ -541,13 +557,14 @@ footer{
     outline: 0;
     text-align: center;
     background-color: rgb(5, 114, 5);
-    
+    margin-right:25px;
 }
 
 
 .bot-on{
     display: flex;
-    justify-content: space-between;
+   justify-content: center;
+  
     
     margin-left:8%;
     margin-right: 8%;
