@@ -23,6 +23,7 @@ function validarFormulario(){
     var cantidad= parseInt(document.getElementById('cantidad').value);
     /*var pagoTotal= document.getElementById("totalPagar").value;*/
     var categoria= document.getElementById("categoria").value;
+    
 
     if(!validarCampo(nombre,"Nombre")){
         return false;
@@ -81,16 +82,18 @@ function validarCampo(){
 }
     
 function calcularDescuento(cantidad,categoria){
+
     var baseTarifa= 200;
-    var descuentoJunior= 0.15;
-    var descuentoTrainee=  0.5; 
     var descuentoEstudiante= 0.8;
-    
+    var descuentoTrainee= 0.5; 
+    var descuentoJunior= 0.15;
+   
     var descuento = 0;
 
     switch(categoria){
         case "estudiante":
-            descuento= descuentoEstudiante;
+            
+            descuento=descuentoEstudiante;
             
             break;
         case "trainee":
@@ -104,9 +107,7 @@ function calcularDescuento(cantidad,categoria){
             break;
     }
     
-    
-    
-    var costoTotal= baseTarifa * cantidad * descuento;
+    var costoTotal= baseTarifa * cantidad * ( 1 - descuento);
 
      return costoTotal;
 }
@@ -120,7 +121,7 @@ function mostrarResumen(){
    
     var costoTotal = calcularDescuento(cantidad, categoria);
 
-    alert('Resumen de compra:\nNombre:' + nombre + '\nApellido: ' + apellido + '\nCorreo: ' + correo + '\nCantidad de tickets: ' + cantidad + '\nCategoria de estudiante :' + categoria + '\nCosto Total a pagar: $' + costoTotal.toFixed(2));
+    alert('Resumen de compra:\nNombre:' + nombre + '\nApellido: ' + apellido + '\nCorreo: ' + correo + '\nCantidad de tickets: ' + cantidad + '\nCategoria: ' + categoria + '\nTotal a pagar: $' + costoTotal.toFixed(2));
     
     document.getElementById("totalPagar").value= costoTotal.toFixed(2);
 
@@ -135,15 +136,7 @@ function borrarCampos(){
    
 
 }
-/*if(categoria==='junior'){
-        costoTotal= baseTarifa*cantidad*descuentoJunior;
-    }else if(categoria==='trainee'){
-        costoTotal=baseTarifa*cantidad*descuentoTrainee;
 
-    }else if(categoria==='estudiante'){
-        costoTotal=baseTarifa*cantidad*descuentoEstudiante;
-
-    }*/
      
 
 

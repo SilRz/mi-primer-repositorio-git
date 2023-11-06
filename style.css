@@ -425,9 +425,8 @@ footer{
    display:flex;
    justify-content:space-between;
    text-align: center;
-   padding:50px;
    margin:20px;
-   max-width: 80%;
+   max-width: 100%;
   
 }
 .tarj1:hover{
@@ -473,103 +472,128 @@ footer{
 }
 
 .modifText{
+    display:block;
     text-align: center;
+    margin-top: 0px;
     z-index: 100%;
   
 }
+
 .formu-dos{
-    display:flex;
-    margin:25px, 0px;
+
+   display:flex;
+   justify-content:space-between;
+   text-align: center;
+   margin:auto;
+   max-width: 100%;
+   box-sizing: border-box;
+   box-shadow: 2px;
     
+}
+.ajus-form input{
+    justify-content: center;
 }
 .ajus-form{
     display:flex;
     background: #fff;
     border: 1px solido;
-    padding: 2px 2px;
-    outline: 0;
+    padding: 5px;
     margin-bottom: 5px;
     margin-left:8%;
     margin-right: 8%;
+   
     
 }
 
 .ajusCorreo{
-    
+
     border:1px solido rgb(75, 71, 71);
     margin-top: 5px;
     margin-bottom: 5px;
     
 }
 .correo{
-    display:flex;
-    margin:25px, 0px;
+    display: flex;
+  justify-content: center;
+   margin-right: 10%;
+   margin-left: 9%;
+   max-width: 100%;
+   
+   
     
     
 
+}
+.correo input{
+    flex:1;
+    padding: 5px;
 }
 .ajus-formu{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 5px;
-    margin-bottom: 5px; 
-   
+    display:flex;
+    max-width: 100%;
+    margin-left: 8%;
+    margin-right: 8%;
     border:1px solido rgb(75, 71, 71);
-    
-    
+    justify-content:space-evenly; 
 }
 .kntidad{
-    display: grid;
-    max-width: 25%;
+    display:flexbox;
     text-align: center;
+    margin:10px;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    
+    
 }
 .ktegoria{
-    display:grid;
-    max-width: 25%;
-    margin:10px;
+    display:flexbox;
+   
     text-align: center;
-    align-items: center;;
+    margin:10px;
+    justify-content: center;
+    box-sizing: border-box;
+    align-items: center;
+    
+    
 }
 .categ{
+    
     border-radius: 10px;
     border:2px solid rgb(75, 73, 73);
-    padding:7px;
-    max-width: 150%;
-    margin-left:2% !important;
-    
-
+    /*margin-left:2% !important;*/
+    padding: 5px;
 }
 .pagr{
     display: flex;
-    max-width: 75%;
     margin-left:8%;
-    margin-right:2%!important;
+    margin-right: 8%;
+    max-width: 100%;
 }
 
 .totalPagar{
+    display: flexbox;
     margin-bottom: 5px;
-    align-items: center;
     background-color: rgb(170, 240, 217);
+    
 }
 .btn-bores{
     border-radius:10px solido rgb(39, 38, 38);
     padding: 2px 2px;
     outline: 0;
-    text-align: center;
     background-color: rgb(5, 114, 5);
-    margin-right:25px;
+    margin-right:100px;
 }
 
 
 .bot-on{
     display: flex;
    justify-content: center;
-  
-    
     margin-left:8%;
     margin-right: 8%;
-    max-width: 75%;
-    
+    max-width: 100%;
+    justify-content: space-around;
+  
     
 }
 .btn-bores:hover{
@@ -697,23 +721,27 @@ footer{
        flex-direction: column;
        padding-left: 2%;
        padding-right: 1%;
-       margin:0%;
+       align-items: center;
        font-size: small;
+       justify-content: center;
     }
+
     .modifText{
+        flex-direction:column;
         font-size:small;
-        margin-top: 50%;
+        margin-top: 2px;
         align-items: center;
 
     }
     
-    #formu-dos input{
-      flex-direction: row;
+    .formu-dos{
+      flex-direction: column;
        max-width: 100%;
        margin-left: 2%;
        margin-right: 2%;
        
     }
+   
     .ajus-form{
         flex-direction: column;
         max-width: 100%;
@@ -734,6 +762,16 @@ footer{
         max-width: 100%;
     }
     .bot-on{
+        flex-direction: column;
+    }
+    .ktegoria{
+        flex-direction: column;
+        
+    }
+    .kntidad{
+        flex-direction: column;
+    }
+    .correo{
         flex-direction: column;
     }
 }
